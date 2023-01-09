@@ -23,7 +23,7 @@ const HOME = ({ items }) => {
   )
 }
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   let r = await fetch("http://localhost:8090/items?_sort=id&_order=desc");
   let d = await r.json();
   return {
